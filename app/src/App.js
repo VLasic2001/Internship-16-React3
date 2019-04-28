@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Dogs from "./components/Dogs";
-import Cats from "./components/Cats";
+import Dogs from "./components/Dogs/Dogs";
+import Cats from "./components/Cats/Cats";
 import Menu from "./components/Menu";
 
 function App() {

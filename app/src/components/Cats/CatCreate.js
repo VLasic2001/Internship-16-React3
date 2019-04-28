@@ -20,6 +20,7 @@ class CatCreate extends React.Component {
       name: this.state.nameInput,
       description: this.state.descriptionInput
     };
+    if (cat.name === "" || cat.description === "") return;
     fetch("http://localhost:3000/cats", {
       method: "POST",
       body: JSON.stringify(cat),

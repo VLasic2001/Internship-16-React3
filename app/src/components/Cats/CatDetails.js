@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { isEmptyStatement } from "@babel/types";
 
 class CatDetails extends React.Component {
   constructor(props) {
@@ -28,7 +29,13 @@ class CatDetails extends React.Component {
     const id = this.props.match.params.id;
     fetch(`http://localhost:3000/cats/${id}`)
       .then(response => response.json())
-      .then(response => this.setState({ cat: response }));
+      .then(response =>
+        this.setState({ cat: response }, function() {
+          if (Object.keys(this.state.cat).length === 0) {
+            this.props.history.push("/");
+          }
+        })
+      );
   }
   render() {
     if (!this.state.cat) {
