@@ -42,7 +42,7 @@ class DogEdit extends React.Component {
       }
     })
       .then(response => response.json())
-      .then(response => this.props.history.push(`/dogs/${this.state.dog.id}`));
+      .then(() => this.props.history.push(`/dogs/${this.state.dog.id}`));
   }
   render() {
     return (

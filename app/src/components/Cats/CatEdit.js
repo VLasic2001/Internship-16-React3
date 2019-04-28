@@ -42,7 +42,7 @@ class CatEdit extends React.Component {
       }
     })
       .then(response => response.json())
-      .then(response => this.props.history.push(`/cats/${this.state.cat.id}`));
+      .then(() => this.props.history.push(`/cats/${this.state.cat.id}`));
   }
   render() {
     return (

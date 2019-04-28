@@ -20,14 +20,14 @@ class DogsList extends React.Component {
       return null;
     }
     return (
-      <>
+      <div className="list">
         {this.state.dogs.map((dog, index) => (
           <Link to={`/dogs/${dog.id}`} key={index}>
             {dog.name}
           </Link>
         ))}
         <Link to="/dogs/create">Add dog</Link>
-      </>
+      </div>
     );
   }
 }
