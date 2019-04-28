@@ -19,11 +19,16 @@ class CatsList extends React.Component {
     if (!this.state.cats) {
       return null;
     }
-    return this.state.cats.map((cat, index) => (
-      <Link to={`/cats/${cat.id}`} key={index}>
-        {cat.name}
-      </Link>
-    ));
+    return (
+      <>
+        {this.state.cats.map((cat, index) => (
+          <Link to={`/cats/${cat.id}`} key={index}>
+            {cat.name}
+          </Link>
+        ))}
+        <Link to="/cats/create">Add cat</Link>
+      </>
+    );
   }
 }
 
