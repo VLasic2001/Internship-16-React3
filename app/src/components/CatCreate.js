@@ -38,11 +38,7 @@ class CatCreate extends React.Component {
           Name: <input onChange={e => this.handleNameChange(e)} />
         </p>
         <p>
-          Description:{" "}
-          <input
-            name="description"
-            onChange={e => this.handleDescriptionChange(e)}
-          />
+          Description: <input onChange={e => this.handleDescriptionChange(e)} />
         </p>
         <button onClick={this.handleSubmit}>Submit</button>
       </>

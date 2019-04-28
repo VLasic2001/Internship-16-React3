@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import CatsList from "./CatsList";
 import CatDetails from "./CatDetails";
 import CatCreate from "./CatCreate";
+import CatEdit from "./CatEdit";
 
 class Cats extends React.Component {
   render() {
@@ -14,6 +15,11 @@ class Cats extends React.Component {
             exact
             path="/cats/create"
             render={props => <CatCreate {...props} />}
+          />
+          <Route
+            exact
+            path="/cats/edit/:id"
+            render={props => <CatEdit {...props} />}
           />
           <Route
             exact

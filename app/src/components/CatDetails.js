@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class CatDetails extends React.Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class CatDetails extends React.Component {
       .then(() => this.props.history.push("/cats"));
   }
 
+  handleEdit() {}
+
   componentDidMount() {
     const id = this.props.match.params.id;
     fetch(`http://localhost:3000/cats/${id}`)
@@ -35,7 +38,7 @@ class CatDetails extends React.Component {
       <div>
         <h1>{this.state.cat.name}</h1>
         <p>{this.state.cat.description}</p>
-        <button>Edit</button>
+        <Link to={`/cats/edit/${this.state.cat.id}`}>Edit</Link>
         <button onClick={this.handleDelete}>Delete</button>
       </div>
     );
