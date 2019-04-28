@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={props => <Menu {...props} />} />
-          <Route exact path="/dogs" render={props => <Dogs {...props} />} />
-          <Route exact path="/cats" render={props => <Cats {...props} />} />
+          <Route path="/dogs" render={props => <Dogs {...props} />} />
+          <Route path="/cats" render={props => <Cats {...props} />} />
           {/* <Redirect to="/" /> */}
         </Switch>
       </BrowserRouter>

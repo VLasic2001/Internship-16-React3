@@ -10,7 +10,7 @@ class CatDetails extends React.Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    fetch(`http://localhost:3000/cats/2`)
+    fetch(`http://localhost:3000/cats/${id}`)
       .then(response => response.json())
       .then(response => {
         this.setState({ cat: response });
@@ -18,7 +18,7 @@ class CatDetails extends React.Component {
   }
   render() {
     if (!this.state.cat) {
-      return <p>asdasfsadf</p>;
+      return null;
     }
     return (
       <div>
