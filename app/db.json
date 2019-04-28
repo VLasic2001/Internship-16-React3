@@ -1,4 +1,3 @@
-    
 {
   "dogs": [
     {
@@ -27,11 +26,6 @@
       "name": "macak",
       "description": "grey",
       "id": 2
-    },
-    {
-      "name": "cat",
-      "description": "grey",
-      "id": 3
     }
   ]
 }
