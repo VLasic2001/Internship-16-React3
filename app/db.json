@@ -1,0 +1,37 @@
+    
+{
+  "dogs": [
+    {
+      "name": "sapa",
+      "description": "black boxer",
+      "id": 1
+    },
+    {
+      "name": "pas",
+      "description": "doberman",
+      "id": 2
+    },
+    {
+      "name": "dog",
+      "description": "akita",
+      "id": 3
+    }
+  ],
+  "cats": [
+    {
+      "name": "macka",
+      "description": "white",
+      "id": 1
+    },
+    {
+      "name": "macak",
+      "description": "grey",
+      "id": 2
+    },
+    {
+      "name": "cat",
+      "description": "grey",
+      "id": 3
+    }
+  ]
+}
