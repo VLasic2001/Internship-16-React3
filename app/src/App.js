@@ -13,7 +13,7 @@ function App() {
           <Route exact path="/" render={props => <Menu {...props} />} />
           <Route path="/dogs" render={props => <Dogs {...props} />} />
           <Route path="/cats" render={props => <Cats {...props} />} />
-          {/* <Redirect to="/" /> */}
+          <Redirect to="/" />
         </Switch>
       </BrowserRouter>
     </div>
